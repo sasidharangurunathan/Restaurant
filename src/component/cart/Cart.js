@@ -1,4 +1,6 @@
 import React from "react";
+import { Navbar, Nav, Form, Button, Container } from "react-bootstrap";
+
 import { useCart } from "react-use-cart";
 import Food1 from '../../image/3menu5.png'
 import Food2 from '../../image/3menu8.png'
@@ -10,7 +12,7 @@ import Food6 from '../../image/3menu3.png';
 import Food7 from '../../image/4menu1.png';
 import Food8 from '../../image/4menu10.png';
 
-import { Navbar, Nav, Form, Button, Container } from "react-bootstrap";
+
 
 import {
   BrowserRouter as Router,
@@ -80,12 +82,12 @@ const Cart = () => {
           <table className="table table-light table-hover m-0">
             <tbody>
               <tr>
-                <th></th>
+                <th>Menu Image</th>
                 <th>Menu Name</th>
                 <th>Menu Price</th>
                 <th>Quantity</th>
                 <th>Update</th>
-                <th></th>
+                
               </tr>
               {items.map((item, index) => {
                 return (
@@ -154,7 +156,7 @@ const Cart = () => {
           </table>
         </div>
         <div className="col-auto ms-auto">
-          <h2 style={{color:"red"}}>Total Price: SAR {cartTotal}  </h2>
+          <h2 style={{color:"red"}}>Total Price: ₹ {cartTotal}  </h2>
         </div>
         <div className="col-auto">
           <button className="btn btn-danger ms-2" onClick={() => emptyCart()}>

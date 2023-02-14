@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import Home from "./Home";
 import Login from "./Login/Login";
+import { BsFillCartPlusFill } from "react-icons/bs";
 import Register from "./Login/Register";
 import { CartProvider } from 'react-use-cart';
 import Cart from "./cart/Cart";
@@ -38,7 +39,7 @@ function Navbar1() {
             <NavDropdown title="Link" id="navbarScrollingDropdown">
               <NavDropdown.Item href="/product">Product</NavDropdown.Item>
               <NavDropdown.Item href="/cart">
-                Cart
+              <BsFillCartPlusFill />
               </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action5">
@@ -47,8 +48,8 @@ function Navbar1() {
             </NavDropdown>
             <Nav.Link href="#action2">TableReservation</Nav.Link>
             
-            <Nav.Link href="#" disabled>
-              Link
+            <Nav.Link href="/cart">
+            <BsFillCartPlusFill />
             </Nav.Link>
           </Nav>
           <Form className="d-flex">
