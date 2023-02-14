@@ -10,6 +10,8 @@ import {
 import Home from "./Home";
 import Login from "./Login/Login";
 import Register from "./Login/Register";
+import { CartProvider } from 'react-use-cart';
+import Cart from "./cart/Cart";
 
 
 
@@ -35,8 +37,8 @@ function Navbar1() {
             <Nav.Link href="/menu">Menu</Nav.Link>
             <NavDropdown title="Link" id="navbarScrollingDropdown">
               <NavDropdown.Item href="/product">Product</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
-                Another action
+              <NavDropdown.Item href="/cart">
+                Cart
               </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action5">
@@ -78,8 +80,11 @@ function Navbar1() {
         <Route path="/register">
           <Register/>
         </Route>
+        <Route path="/cart">
+        <CartProvider><Cart/></CartProvider>
+        </Route>
         <Route path="/menu">
-          <MenuDataContainer />
+        <CartProvider><MenuDataContainer /></CartProvider>
         </Route>
         <Route path="/product">
           <Product />
