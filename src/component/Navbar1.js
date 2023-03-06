@@ -84,10 +84,10 @@ function Navbar1() {
         <Route path="/cart">
         <CartProvider><Cart/></CartProvider>
         </Route>
-        <Route path="/menu">
+        <Route path="https://fabulous-marzipan-aaa2de.netlify.app/menu">
         <CartProvider><MenuDataContainer /></CartProvider>
         </Route>
-        <Route path="/product">
+        <Route path="https://fabulous-marzipan-aaa2de.netlify.app/product">
           <Product />
         </Route>
         <Route path="/">
